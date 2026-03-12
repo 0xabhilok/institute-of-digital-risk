@@ -9,6 +9,7 @@
       dark scrolled when on hero,
       light when past hero
 ────────────────────────────────────────── */
+// Uses scroll position to toggle .scrolled and .on-light classes
 (function initNavbar() {
   const nav    = document.getElementById('navbar');
   const hero   = document.getElementById('hero');
