@@ -24,7 +24,7 @@
 
 ## Project Overview
 
-This project is a single-page website and brand identity for the **Institute of Digital Risk (IDR)** — an industry-led training and deployment institute focused on digital, cyber and AI risk. 
+This projct is a single-page website and brand identity for the **Institute of Digital Risk (IDR)** — an industry-led training and deployment institute focused on digital, cyber and AI risk. 
 
 The deliverables include:
 
