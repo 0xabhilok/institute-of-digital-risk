@@ -1,0 +1,58 @@
+<!--
+  IDR Logo — Full Variant (Icon + Text)
+  Width: 320px | Height: 64px
+  Fonts embedded as text (renders using system sans-serif fallback in SVG)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Institute of Digital Risk">
+
+  <defs>
+    <linearGradient id="g-top-f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="g-left-f" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+    <linearGradient id="g-right-f" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C2410C"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Cube icon (scaled to 56×56, centred vertically) ── -->
+  <g transform="translate(4, 4)">
+    <polygon points="28,2  52,15  28,28  4,15"  fill="url(#g-top-f)"/>
+    <polygon points="4,15  28,28  28,54  4,41"  fill="url(#g-left-f)"/>
+    <polygon points="28,28  52,15  52,41  28,54" fill="url(#g-right-f)"/>
+    <polyline points="4,15  28,2  52,15" fill="none" stroke="#FED7AA" stroke-width="0.6" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- ── Divider line ── -->
+  <line x1="72" y1="14" x2="72" y2="50" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- ── Wordmark ── -->
+  <!-- IDR acronym -->
+  <text
+    x="84" y="30"
+    font-family="'Outfit', 'Segoe UI', sans-serif"
+    font-weight="700"
+    font-size="20"
+    letter-spacing="3"
+    fill="#111827"
+  >IDR</text>
+
+  <!-- Full name on second line -->
+  <text
+    x="84" y="47"
+    font-family="'Outfit', 'Segoe UI', sans-serif"
+    font-weight="400"
+    font-size="9.5"
+    letter-spacing="1.8"
+    fill="#6B7280"
+  >INSTITUTE OF DIGITAL RISK</text>
+
+  <!-- Orange underline accent on IDR -->
+  <rect x="84" y="33" width="42" height="2" rx="1" fill="#F97316"/>
+
+</svg>

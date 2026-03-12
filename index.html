@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    ═══════════════════════════════════════════════
+    Institute of Digital Risk (IDR) — Homepage
+    Author  : [Student Name]
+    Date    : 2025
+    Fonts   : Outfit + Nunito Sans (Google Fonts)
+    Colours : #F97316 orange | #111827 black | #FFFFFF white
+    ═══════════════════════════════════════════════
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Institute of Digital Risk (IDR) trains and deploys digital risk practitioners combining academic insight with real-world industry practice." />
+
+  <title>Institute of Digital Risk — IDR</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,300&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HEADER & NAVIGATION
+  ══════════════════════════════════════════ -->
+  <header>
+    <nav id="navbar" role="navigation" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-inner">
+
+          <!-- Logo -->
+          <a href="#hero" class="nav-logo" aria-label="IDR — Go to home">
+            <!--
+              Inline SVG logo (icon + text).
+              Keeping it inline means no extra HTTP request
+              and it scales perfectly at any DPR.
+            -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" height="42" role="img" aria-label="IDR logo">
+              <defs>
+                <linearGradient id="nav-top" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FB923C"/>
+                  <stop offset="100%" stop-color="#F97316"/>
+                </linearGradient>
+                <linearGradient id="nav-left" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#111827"/>
+                  <stop offset="100%" stop-color="#1F2937"/>
+                </linearGradient>
+                <linearGradient id="nav-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#C2410C"/>
+                  <stop offset="100%" stop-color="#9A3412"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Cube icon -->
+              <g transform="translate(2,2)">
+                <polygon points="26,2  48,14  26,26  4,14"  fill="url(#nav-top)"/>
+                <polygon points="4,14  26,26  26,50  4,38"  fill="url(#nav-left)"/>
+                <polygon points="26,26  48,14  48,38  26,50" fill="url(#nav-right)"/>
+                <polyline points="4,14  26,2  48,14" fill="none" stroke="#FED7AA" stroke-width="0.5" stroke-opacity="0.6"/>
+              </g>
+
+              <!-- Divider -->
+              <line x1="64" y1="10" x2="64" y2="46" stroke="#E5E7EB" stroke-width="1"/>
+
+              <!-- IDR acronym -->
+              <text x="76" y="28"
+                font-family="'Outfit','Segoe UI',sans-serif"
+                font-weight="800" font-size="19"
+                letter-spacing="3" fill="#111827">IDR</text>
+
+              <!-- Orange underline accent -->
+              <rect x="76" y="31" width="40" height="2" rx="1" fill="#F97316"/>
+
+              <!-- Subtitle -->
+              <text x="76" y="44"
+                font-family="'Outfit','Segoe UI',sans-serif"
+                font-weight="400" font-size="8.5"
+                letter-spacing="1.6" fill="#9CA3AF">INSTITUTE OF DIGITAL RISK</text>
+            </svg>
+          </a>
+
+          <!-- Desktop nav links -->
+          <ul class="nav-links" role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pipeline">How It Works</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Desktop CTA -->
+          <a href="#contact" class="nav-cta">Register Interest</a>
+
+          <!-- Mobile hamburger button -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div><!-- /.nav-inner -->
+      </div><!-- /.container -->
+
+      <!-- Mobile drawer menu -->
+      <div class="mobile-menu" id="mobile-menu" role="menu">
+        <a href="#about"     role="menuitem">About</a>
+        <a href="#services"  role="menuitem">Services</a>
+        <a href="#pipeline"  role="menuitem">How It Works</a>
+        <a href="#community" role="menuitem">Community</a>
+        <a href="#contact"   role="menuitem">Contact</a>
+        <a href="#contact" class="btn btn-primary" role="menuitem">Register Interest</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════ -->
+  <main>
+
+    <!-- ─────────────────────────────────────
+         SECTION 1: HERO
+    ───────────────────────────────────────── -->
+    <section id="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: headline + text + CTAs -->
+          <div class="hero-text">
+
+            <div class="hero-badge" aria-label="Status">
+              <span class="hero-badge-dot" aria-hidden="true"></span>
+              Now Enrolling — 2025 Cohort
+            </div>
+
+            <h1>
+              Advancing the Future of
+              <span>Digital Risk</span>
+            </h1>
+
+            <p>
+              IDR trains and deploys the next generation of digital risk
+              practitioners — combining rigorous academic collaboration
+              with hands-on industry experience across cyber, AI governance
+              and technology risk.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary">
+                Explore Programs
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Hire Talent
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <!-- Credibility stats -->
+            <div class="hero-stats" aria-label="Key facts">
+              <div class="stat">
+                <div class="stat-number">3<em>+</em></div>
+                <div class="stat-label">Service Pillars</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">UK <em>×</em> Ind</div>
+                <div class="stat-label">Academic Partnership</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">360<em>°</em></div>
+                <div class="stat-label">Risk Coverage</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">AI<em>/</em>Cyber</div>
+                <div class="stat-label">Core Disciplines</div>
+              </div>
+            </div>
+
+          </div><!-- /.hero-text -->
+
+          <!-- Right: decorative cube graphic (hidden on mobile via CSS) -->
+          <div class="hero-graphic" aria-hidden="true">
+            <div class="hero-cube-wrap">
+
+              <!-- Large decorative isometric cube SVG -->
+              <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="big-top" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FB923C"/>
+                    <stop offset="100%" stop-color="#F97316"/>
+                  </linearGradient>
+                  <linearGradient id="big-left" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#111827"/>
+                    <stop offset="100%" stop-color="#1F2937"/>
+                  </linearGradient>
+                  <linearGradient id="big-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#C2410C"/>
+                    <stop offset="100%" stop-color="#9A3412"/>
+                  </linearGradient>
+                  <!-- Glow filter -->
+                  <filter id="glow" x="-20%" y="-20%" width="150%" height="150%">
+                    <feGaussianBlur stdDeviation="10" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+
+                <!-- Soft glow shadow at base -->
+                <ellipse cx="140" cy="212" rx="80" ry="16" fill="#F97316" opacity="0.12"/>
+
+                <!-- Main cube faces -->
+                <polygon points="140,30  228,78  140,126  52,78"  fill="url(#big-top)"/>
+                <polygon points="52,78   140,126  140,224  52,176" fill="url(#big-left)"/>
+                <polygon points="140,126 228,78   228,176  140,224" fill="url(#big-right)"/>
+
+                <!-- Top edge highlight -->
+                <polyline points="52,78  140,30  228,78"
+                  fill="none" stroke="#FED7AA" stroke-width="0.8" stroke-opacity="0.5"/>
+
+                <!-- Inner vertical edge -->
+                <line x1="140" y1="126" x2="140" y2="224"
+                  stroke="#111827" stroke-width="0.6" stroke-opacity="0.4"/>
+
+                <!-- Small accent cube top-right -->
+                <polygon points="210,22  234,36  210,50  186,36" fill="#F97316" opacity="0.2"/>
+                <polygon points="186,36  210,50  210,78  186,64"  fill="#111827" opacity="0.7"/>
+                <polygon points="210,50  234,36  234,64  210,78"  fill="#C2410C" opacity="0.45"/>
+
+                <!-- Small accent cube bottom-left -->
+                <polygon points="44,188  68,202  44,216  20,202" fill="#F97316" opacity="0.15"/>
+                <polygon points="20,202  44,216  44,244  20,230"  fill="#111827" opacity="0.5"/>
+                <polygon points="44,216  68,202  68,230  44,244"  fill="#C2410C" opacity="0.3"/>
+              </svg>
+
+              <!-- Floating info chips -->
+              <div class="hero-chip chip-1">
+                <span class="chip-icon">🛡️</span> Cyber Risk
+              </div>
+              <div class="hero-chip chip-2">
+                <span class="chip-icon">🤖</span> AI Governance
+              </div>
+              <div class="hero-chip chip-3">
+                <span class="chip-icon">📋</span> ISO 27001
+              </div>
+
+            </div><!-- /.hero-cube-wrap -->
+          </div><!-- /.hero-graphic -->
+
+        </div><!-- /.hero-inner -->
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ─────────────────────────────────────
+         SECTION 2: ABOUT IDR
+    ───────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Left: copy -->
+          <div class="about-content">
+            <p class="section-label">About IDR</p>
+            <h2 id="about-heading" class="reveal">
+              Where Academic Rigour Meets Industry Reality
+            </h2>
+
+            <p class="reveal reveal-delay-1">
+              The Institute of Digital Risk (IDR) is an industry-led training and
+              deployment institute built to address the growing shortage of skilled
+              professionals in digital, cyber and AI risk. We operate at the
+              intersection of regulated industry and higher education — partnering
+              with leading UK universities to deliver programmes that reflect the
+              genuine challenges organisations face in high-consequence environments.
+            </p>
+
+            <p class="reveal reveal-delay-2">
+              Our model goes beyond the classroom. By embedding academic insight
+              directly into live industry projects, we ensure every practitioner
+              we develop is deployment-ready from day one — whether that means
+              managing a cyber incident, implementing a risk framework, or advising
+              on AI governance policy.
+            </p>
+
+            <div class="about-tags reveal reveal-delay-3">
+              <span class="tag">AI Risk</span>
+              <span class="tag">Cyber Risk</span>
+              <span class="tag">Digital Governance</span>
+              <span class="tag">Technology Risk</span>
+              <span class="tag">Regulatory Compliance</span>
+              <span class="tag">Industry Deployment</span>
+            </div>
+          </div>
+
+          <!-- Right: visual data panel -->
+          <div class="about-visual reveal reveal-delay-2">
+            <p class="about-visual-heading">Our Focus Areas</p>
+            <div class="about-kpi-list">
+              <div class="kpi-item">
+                <span class="kpi-label">Digital &amp; Cyber Risk</span>
+                <span class="kpi-value">Core pillar</span>
+              </div>
+              <div class="kpi-item">
+                <span class="kpi-label">AI Governance &amp; Ethics</span>
+                <span class="kpi-value">Emerging specialism</span>
+              </div>
+              <div class="kpi-item">
+                <span class="kpi-label">Technology Risk Management</span>
+                <span class="kpi-value">Core pillar</span>
+              </div>
+              <div class="kpi-item">
+                <span class="kpi-label">Regulatory Frameworks</span>
+                <span class="kpi-value">NIST · ISO · NIS2</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.about-grid -->
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ─────────────────────────────────────
+         SECTION 3: SERVICE PILLARS
+    ───────────────────────────────────────── -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <p class="section-label">What We Do</p>
+          <h2 id="services-heading" class="reveal">
+            Three Pillars, One Integrated Model
+          </h2>
+          <p class="reveal reveal-delay-1">
+            IDR delivers end-to-end capability across education, innovation
+            and advisory — designed to work as a single, connected system.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- Card 1: Academy -->
+          <article class="service-card reveal" aria-label="Academy service">
+            <div class="card-number" aria-hidden="true">01</div>
+            <div class="card-icon-wrap" aria-hidden="true">🎓</div>
+            <h3>Academy</h3>
+            <p>
+              Structured bootcamps and professional development pathways for
+              students and career-changers. Our curriculum is co-designed with
+              industry partners to address real gaps in cyber and AI risk talent.
+            </p>
+          </article>
+
+          <!-- Card 2: Innovation & Incubation -->
+          <article class="service-card reveal reveal-delay-1" aria-label="Innovation and Incubation service">
+            <div class="card-number" aria-hidden="true">02</div>
+            <div class="card-icon-wrap" aria-hidden="true">💡</div>
+            <h3>Innovation &amp; Incubation</h3>
+            <p>
+              Research into emerging risk frameworks, AI governance models and
+              digital resilience strategies. We develop proprietary IP and
+              methodologies that keep organisations ahead of evolving threats.
+            </p>
+          </article>
+
+          <!-- Card 3: Advisory Services -->
+          <article class="service-card reveal reveal-delay-2" aria-label="Advisory Services">
+            <div class="card-number" aria-hidden="true">03</div>
+            <div class="card-icon-wrap" aria-hidden="true">📊</div>
+            <h3>Advisory Services</h3>
+            <p>
+              Expert guidance for organisations implementing NIST CSF, ISO 27001,
+              and NIS2. We translate complex regulatory obligations into practical
+              programmes that build lasting operational resilience.
+            </p>
+          </article>
+
+        </div><!-- /.cards-grid -->
+
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ─────────────────────────────────────
+         SECTION 4: PIPELINE — Train → Hire → Innovate → Deploy
+    ───────────────────────────────────────── -->
+    <section id="pipeline" aria-labelledby="pipeline-heading">
+      <div class="container">
+
+        <div class="section-header centered">
+          <p class="section-label">How It Works</p>
+          <h2 id="pipeline-heading" class="reveal">
+            The IDR Talent Pipeline
+          </h2>
+          <p class="reveal reveal-delay-1">
+            A closed-loop model that connects education, industry and
+            innovation — ensuring practitioners are always deployment-ready.
+          </p>
+        </div>
+
+        <!-- Pipeline steps -->
+        <div class="pipeline-steps reveal reveal-delay-2" role="list" aria-label="Pipeline steps">
+
+          <!-- Step 1: Train -->
+          <div class="pipeline-step" role="listitem">
+            <div class="step-circle">
+              🎓
+              <span class="step-number" aria-hidden="true">1</span>
+            </div>
+            <p class="step-title">Train</p>
+            <p class="step-desc">Academic bootcamps &amp; professional programmes</p>
+          </div>
+
+          <span class="pipeline-arrow" aria-hidden="true">→</span>
+
+          <!-- Step 2: Hire -->
+          <div class="pipeline-step" role="listitem">
+            <div class="step-circle">
+              🤝
+              <span class="step-number" aria-hidden="true">2</span>
+            </div>
+            <p class="step-title">Hire</p>
+            <p class="step-desc">Matched placement into partner organisations</p>
+          </div>
+
+          <span class="pipeline-arrow" aria-hidden="true">→</span>
+
+          <!-- Step 3: Innovate -->
+          <div class="pipeline-step" role="listitem">
+            <div class="step-circle">
+              💡
+              <span class="step-number" aria-hidden="true">3</span>
+            </div>
+            <p class="step-title">Innovate</p>
+            <p class="step-desc">R&amp;D lab developing next-gen risk models</p>
+          </div>
+
+          <span class="pipeline-arrow" aria-hidden="true">→</span>
+
+          <!-- Step 4: Deploy -->
+          <div class="pipeline-step" role="listitem">
+            <div class="step-circle">
+              🚀
+              <span class="step-number" aria-hidden="true">4</span>
+            </div>
+            <p class="step-title">Deploy</p>
+            <p class="step-desc">Operational talent into high-consequence sectors</p>
+          </div>
+
+        </div><!-- /.pipeline-steps -->
+
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ─────────────────────────────────────
+         SECTION 5: COMMUNITY
+    ───────────────────────────────────────── -->
+    <section id="community" aria-labelledby="community-heading">
+      <div class="container">
+        <div class="community-grid">
+
+          <!-- Left: copy + sector tags -->
+          <div class="community-content">
+            <p class="section-label">Our Community</p>
+            <h2 id="community-heading" class="reveal">
+              Built for Risk Professionals at Every Stage
+            </h2>
+
+            <p class="reveal reveal-delay-1">
+              IDR brings together a community of students, early-career
+              professionals and experienced practitioners united by a
+              shared commitment to managing the risks of digital transformation.
+              Whether you are entering the field or seeking advanced expertise,
+              IDR offers the pathways, networks and credentials to accelerate
+              your impact in regulated environments.
+            </p>
+
+            <!-- Sector tags -->
+            <div class="sector-grid reveal reveal-delay-2" aria-label="Sectors we serve">
+              <span class="sector-pill">Financial Services</span>
+              <span class="sector-pill">Critical Infrastructure</span>
+              <span class="sector-pill">Healthcare</span>
+              <span class="sector-pill">Energy &amp; Utilities</span>
+              <span class="sector-pill">Government</span>
+              <span class="sector-pill">Defence</span>
+              <span class="sector-pill">Telecoms</span>
+              <span class="sector-pill">Insurance</span>
+            </div>
+          </div>
+
+          <!-- Right: audience cards -->
+          <div class="audience-list reveal reveal-delay-1" role="list" aria-label="Who we serve">
+
+            <div class="audience-item" role="listitem">
+              <span class="audience-emoji" aria-hidden="true">🎓</span>
+              <div class="audience-text">
+                <strong>Students</strong>
+                <span>University graduates seeking specialist pathways into digital and cyber risk roles</span>
+              </div>
+            </div>
+
+            <div class="audience-item" role="listitem">
+              <span class="audience-emoji" aria-hidden="true">🚀</span>
+              <div class="audience-text">
+                <strong>Early-Career Professionals</strong>
+                <span>Those within 1–5 years of their career looking to specialise and gain industry credentials</span>
+              </div>
+            </div>
+
+            <div class="audience-item" role="listitem">
+              <span class="audience-emoji" aria-hidden="true">💼</span>
+              <div class="audience-text">
+                <strong>Cyber Risk Practitioners</strong>
+                <span>Experienced professionals seeking advanced capability in AI governance and emerging risks</span>
+              </div>
+            </div>
+
+            <div class="audience-item" role="listitem">
+              <span class="audience-emoji" aria-hidden="true">🏛️</span>
+              <div class="audience-text">
+                <strong>Organisations</strong>
+                <span>Employers in financial services and critical infrastructure looking to access specialist talent</span>
+              </div>
+            </div>
+
+          </div><!-- /.audience-list -->
+
+        </div><!-- /.community-grid -->
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ─────────────────────────────────────
+         SECTION 6: CONTACT
+    ───────────────────────────────────────── -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left: contact info -->
+          <div class="contact-info">
+            <p class="section-label">Get in Touch</p>
+            <h2 id="contact-heading" class="reveal">
+              Register Your Interest
+            </h2>
+            <p class="reveal reveal-delay-1">
+              Whether you want to join a programme, hire IDR talent, explore
+              advisory services, or become a partner — we would like to hear
+              from you. Fill in the form and we will be in touch within two
+              business days.
+            </p>
+
+            <div class="contact-detail reveal reveal-delay-2">
+              <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+              <span>hello@digitalrisk.institute</span>
+            </div>
+
+            <div class="contact-detail reveal reveal-delay-3">
+              <div class="contact-detail-icon" aria-hidden="true">📍</div>
+              <span>London, United Kingdom</span>
+            </div>
+
+            <div class="contact-detail reveal reveal-delay-4">
+              <div class="contact-detail-icon" aria-hidden="true">🔗</div>
+              <span>linkedin.com/company/idr</span>
+            </div>
+          </div>
+
+          <!-- Right: contact form -->
+          <div class="reveal reveal-delay-1">
+            <form
+              class="contact-form"
+              id="contact-form"
+              novalidate
+              aria-label="Register interest form"
+            >
+
+              <!-- Name + Email row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Jane Smith"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="jane@company.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <!-- Area of interest -->
+              <div class="form-group">
+                <label for="interest">Area of Interest</label>
+                <select id="interest" name="interest">
+                  <option value="" disabled selected>Select an option…</option>
+                  <option value="academy">Academy / Training Programme</option>
+                  <option value="hire">Hire IDR Talent</option>
+                  <option value="advisory">Advisory Services</option>
+                  <option value="partnership">Academic / Industry Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us a little about what you are looking for…"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Submit row -->
+              <div class="form-footer">
+                <p class="form-note">
+                  We aim to respond within 2 business days.
+                </p>
+                <button type="submit" class="btn btn-primary">
+                  Register Interest
+                  <span class="arrow" aria-hidden="true">→</span>
+                </button>
+              </div>
+
+              <!-- Success message (shown after JS submission) -->
+              <div class="form-success" id="form-success" role="status" aria-live="polite">
+                <span aria-hidden="true">✅</span>
+                Thank you — we have received your message and will be in touch shortly.
+              </div>
+
+            </form>
+          </div>
+
+        </div><!-- /.contact-grid -->
+      </div><!-- /.container -->
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="IDR Home">
+            <!-- Compact logo for footer -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height="38" role="img" aria-label="IDR icon">
+              <defs>
+                <linearGradient id="f-top" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FB923C"/><stop offset="100%" stop-color="#F97316"/>
+                </linearGradient>
+                <linearGradient id="f-left" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#1F2937"/>
+                </linearGradient>
+                <linearGradient id="f-right" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#C2410C"/><stop offset="100%" stop-color="#9A3412"/>
+                </linearGradient>
+              </defs>
+              <polygon points="32,6  56,19  32,32  8,19"  fill="url(#f-top)"/>
+              <polygon points="8,19  32,32  32,58  8,45"  fill="url(#f-left)"/>
+              <polygon points="32,32 56,19  56,45  32,58" fill="url(#f-right)"/>
+              <polyline points="8,19  32,6  56,19" fill="none" stroke="#FED7AA" stroke-width="0.6" stroke-opacity="0.6"/>
+            </svg>
+            <div class="nav-logo-text" style="font-family:'Outfit',sans-serif;">
+              <span style="font-weight:800;font-size:1rem;color:#F97316;letter-spacing:0.1em;">IDR</span>
+            </div>
+          </a>
+          <p>
+            An industry-led training and deployment institute at the frontier
+            of digital, cyber and AI risk capability.
+          </p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Institute</h4>
+          <ul>
+            <li><a href="#about">About IDR</a></li>
+            <li><a href="#services">Academy</a></li>
+            <li><a href="#services">Advisory</a></li>
+            <li><a href="#services">Innovation Lab</a></li>
+            <li><a href="#pipeline">How It Works</a></li>
+          </ul>
+        </div>
+
+        <!-- For community -->
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#community">Students</a></li>
+            <li><a href="#community">Professionals</a></li>
+            <li><a href="#community">Organisations</a></li>
+            <li><a href="#contact">Partner with Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#contact">Register Interest</a></li>
+            <li><a href="mailto:hello@digitalrisk.institute">Email Us</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-top -->
+
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2025</span> Institute of Digital Risk. All rights reserved.</p>
+        <div class="footer-badges" aria-label="Supported frameworks">
+          <span class="footer-badge">NIST CSF</span>
+          <span class="footer-badge">ISO 27001</span>
+          <span class="footer-badge">NIS2</span>
+          <span class="footer-badge">AI Governance</span>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- JavaScript (deferred so it loads after DOM) -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
