@@ -10,7 +10,7 @@
 /* ── DESIGN TOKENS ── */
 :root {
   /* Brand */
-  --orange:        #F97316;
+  --orange:        #F86F0F;
   --orange-dark:   #C2410C;
   --orange-dim:    rgba(249,115,22,0.10);
   --orange-glow:   rgba(249,115,22,0.22);
