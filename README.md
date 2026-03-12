@@ -12,7 +12,7 @@ Homepage project built in two versions as part of a web development assignment.
 ## Tech Stack
 - Vanilla HTML5, CSS3, JavaScript — no frameworks
 - Custom SVG logo designed from scratch
-- Deployed via GitHub Pages
+
 
 ## Author
 Abhilok Reddy · BTech CSE · IIIT Guwahati
